@@ -71,7 +71,7 @@ osm2pgsql -O flex -S .\fetch_from_osm.lua .\russia-usa.osm.pbf --database=postgr
 
 После окончания обработки нужно выполнить SQL-скрипт `start_loading_geo_data.sql`, который добавит данные в итоговые таблицы.
 
-### Визуально посмотреть с полученным результатом можно с помощью QGIS
+### Визуально посмотреть полученный результат можно с помощью QGIS
 
 https://qgis.org/ru/site/
 
