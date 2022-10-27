@@ -48,7 +48,8 @@ DO $$
 				(SELECT boundary FROM geometry_countries WHERE relation_id=_country_relation_id), 
 				boundary
 			) 
-			AND relation_id !=72639 -- украинский Крым отсекаем
+			AND relation_id !=72639 -- украинский Крым отсекаем (есть российский)
+			AND relation_id !=1574364 -- украинский Севастополь отсекаем (есть российский)
 			
 			ORDER BY tags->'name'
 
