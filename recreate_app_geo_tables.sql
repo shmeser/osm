@@ -100,12 +100,12 @@ CREATE TABLE "public"."app_geo__cities" (
   "boundary" "public"."geometry",
   "center" "public"."geometry",
   "country_id" int4,
-  "district_id" int4,
   "region_id" int4,
+  "district_id" int4,
   CONSTRAINT "app_geo__cities_pkey" PRIMARY KEY ("id"),
   CONSTRAINT "app_geo__cities_country_id_fk_app_geo__countries_id" FOREIGN KEY ("country_id") REFERENCES "public"."app_geo__countries" ("id") ON DELETE NO ACTION ON UPDATE NO ACTION DEFERRABLE INITIALLY DEFERRED,
-  CONSTRAINT "app_geo__cities_district_id_fk_app_geo__districts_id" FOREIGN KEY ("district_id") REFERENCES "public"."app_geo__districts" ("id") ON DELETE NO ACTION ON UPDATE NO ACTION DEFERRABLE INITIALLY DEFERRED,
-  CONSTRAINT "app_geo__cities_region_id_fk_app_geo__regions_id" FOREIGN KEY ("region_id") REFERENCES "public"."app_geo__regions" ("id") ON DELETE NO ACTION ON UPDATE NO ACTION DEFERRABLE INITIALLY DEFERRED
+  CONSTRAINT "app_geo__cities_region_id_fk_app_geo__regions_id" FOREIGN KEY ("region_id") REFERENCES "public"."app_geo__regions" ("id") ON DELETE NO ACTION ON UPDATE NO ACTION DEFERRABLE INITIALLY DEFERRED,
+  CONSTRAINT "app_geo__cities_district_id_fk_app_geo__districts_id" FOREIGN KEY ("district_id") REFERENCES "public"."app_geo__districts" ("id") ON DELETE NO ACTION ON UPDATE NO ACTION DEFERRABLE INITIALLY DEFERRED
 )
 ;
 
