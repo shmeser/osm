@@ -41,7 +41,9 @@ https://wiki.openstreetmap.org/wiki/Osmosis#Downloading
 ```
 osmosis --read-pbf russia-latest.osm.pbf --read-pbf usa-latest.osm.pbf --merge --write-pbf russia-usa.osm.pbf
 ```
+>Total execution time: 2673012 milliseconds.
 На выходе получим данные по РФ и США в файле `russia-usa.osm.pbf`
+
 
 ## Выполняем вычленение данных из сжатого файла
 
